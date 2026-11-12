@@ -1,0 +1,463 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>赤脉 · 红色文化数字展</title>
+<meta name="description" content="赤脉——一条贯穿百年的红线。红色文化主题数字展，交互式网页设计作品。" />
+<meta name="theme-color" content="#0a0303" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23a3121a'/%3E%3Ctext x='32' y='46' font-size='38' text-anchor='middle' fill='%23f4ead9' font-family='serif'%3E赤%3C/text%3E%3C/svg%3E" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ======================= 顶部导航 ======================= -->
+<header class="hdr" id="hdr">
+  <a class="brand" href="#top" aria-label="赤脉">
+    <span class="brand__seal">赤</span>
+    <span class="brand__txt">赤脉<em>THE RED THREAD</em></span>
+  </a>
+
+  <nav class="nav" aria-label="主导航">
+    <a href="#prologue" data-nav>序</a>
+    <a href="#years" data-nav>峥嵘</a>
+    <a href="#steps" data-nav>关键</a>
+    <a href="#places" data-nav>地标</a>
+    <a href="#spirit" data-nav>精神</a>
+    <a href="#tribute" data-nav>致敬</a>
+  </nav>
+
+  <div class="hdr__right">
+    <a class="hdr__cta" href="#tribute">点亮一盏灯</a>
+    <button class="burger" id="burger" aria-label="打开菜单" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- 移动端全屏菜单 -->
+<div class="menu" id="menu" aria-hidden="true">
+  <nav class="menu__nav">
+    <a href="#prologue"><i>00</i>序</a>
+    <a href="#years"><i>01</i>峥嵘岁月</a>
+    <a href="#steps"><i>02</i>关键一步</a>
+    <a href="#places"><i>03</i>红色地标</a>
+    <a href="#spirit"><i>04</i>精神谱系</a>
+    <a href="#tribute"><i>05</i>点亮一盏灯</a>
+  </nav>
+  <p class="menu__foot">红色网页设计大赛 · 参赛作品</p>
+</div>
+
+<div class="scrollbar" id="scrollbar" aria-hidden="true"></div>
+
+<main id="top">
+
+  <!-- ======================= 首屏 ======================= -->
+  <section class="hero">
+    <div class="hero__art" id="heroArt" aria-hidden="true">
+      <div class="hero__disc"></div>
+      
+      <div class="haze"></div>
+      <canvas id="embers"></canvas>
+    </div>
+
+    <div class="hero__inner">
+      <div class="hero__text">
+        <p class="kicker"><span class="kicker__line"></span>红色文化数字展 · 1921—2025</p>
+        <h1 class="hero__title"><span data-split>赤</span><span data-split class="hollow">脉</span></h1>
+        <p class="hero__en">The Red Thread — a century in one line</p>
+        <p class="hero__lede">这事从南湖一条小船上开始。<br />走了一百多年，还没走完。</p>
+        <div class="hero__act">
+          <a class="btn btn--solid" href="#years"><span>走进百年</span><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn--line" href="#places">看红色地标</a>
+        </div>
+      </div>
+
+      <aside class="hero__years" aria-label="关键年份">
+        <p>CORE YEARS</p>
+        <ol>
+          <li><b>1921</b><span>南湖开会</span></li>
+          <li><b>1927</b><span>上井冈山</span></li>
+          <li><b>1935</b><span>遵义会议</span></li>
+          <li><b>1949</b><span>开国</span></li>
+          <li><b>2025</b><span>还在走</span></li>
+        </ol>
+      </aside>
+    </div>
+
+    <div class="hero__foot">
+      <span class="hero__foot-l">SCROLL</span>
+      <span class="hero__line"><i></i></span>
+      <span class="hero__foot-r">红色网页设计大赛 · 参赛作品</span>
+    </div>
+  </section>
+
+  <!-- ======================= 走马灯 ======================= -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__row" id="marquee">
+      <span>1921 南湖开会</span><i>✦</i>
+      <span>1927 上井冈山</span><i>✦</i>
+      <span>1934 长征出发</span><i>✦</i>
+      <span>1935 遵义开会</span><i>✦</i>
+      <span>1949 开国</span><i>✦</i>
+      <span>今天 还在走</span><i>✦</i>
+    </div>
+  </div>
+
+  <!-- ======================= 序 ======================= -->
+  <section class="sec prologue" id="prologue">
+    <div class="wrap prologue__grid">
+      <div class="sec__label">
+        <span class="sec__no">00</span>
+        <h2>序</h2>
+        <p>PROLOGUE</p>
+      </div>
+      <div class="prologue__body">
+        <p class="prologue__big reveal">
+          红色是条<em>线</em>。<br />
+          顺着它往回走，<br />
+          能一直走到一百年前那条船上。
+        </p>
+        <div class="prologue__cols">
+          <p class="reveal">一百年前，十几个人挤在一条船上开了个会。他们没见过后来的中国，却把命押了上去。我们现在走的，还是他们划出来的那条路。</p>
+          <p class="reveal">这条线没写在纸上。它在井冈山的竹林里，在赤水河的渡口上，在陕北的一孔窑洞里。</p>
+        </div>
+        <div class="prologue__stats">
+          <div class="reveal"><b data-count="1921">1921</b><span>建党那年</span></div>
+          <div class="reveal"><b data-count="28">28<em>年</em></b><span>从建党到建国</span></div>
+          <div class="reveal"><b data-count="25000">25000<em>里</em></b><span>长征走了</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= 峥嵘岁月（横向时间轴） ======================= -->
+  <section class="sec years" id="years">
+    <div class="wrap sec__head">
+      <div class="sec__label">
+        <span class="sec__no">01</span>
+        <h2>峥嵘岁月</h2>
+        <p>THE YEARS</p>
+      </div>
+      <div class="sec__intro">
+        <p>五个年份，五次大转弯。往右拖，一年一年看过去。</p>
+        <div class="years__ctrl">
+          <button class="round" id="prevYear" aria-label="上一个"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+          <button class="round" id="nextYear" aria-label="下一个"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="years__viewport" id="yearsViewport">
+      <div class="years__track" id="yearsTrack">
+        <article class="ycard" data-year="1921" tabindex="0" role="button" aria-label="1921 南湖的船，查看简介">
+          <span class="ycard__no">01</span>
+          <span class="ycard__year">1921</span>
+          <h3>南湖的船</h3>
+          <p class="ycard__meta">上海 · 嘉兴南湖</p>
+          <p class="ycard__txt">开会的地方在上海望志路一栋石库门里，最后一天挪到了嘉兴南湖的船上。一共十三个人，平均二十八岁。</p>
+          <span class="ycard__more">展开 ＋</span>
+        </article>
+
+        <article class="ycard" data-year="1927" tabindex="0" role="button" aria-label="1927 上了井冈山，查看简介">
+          <span class="ycard__no">02</span>
+          <span class="ycard__year">1927</span>
+          <h3>上了井冈山</h3>
+          <p class="ycard__meta">江西 · 井冈山</p>
+          <p class="ycard__txt">秋收起义的队伍上了罗霄山中段，在山里扎下第一个根据地。八角楼那盏灯下，他们想明白一件事：城市打不下来，那就从农村开始。</p>
+          <span class="ycard__more">展开 ＋</span>
+        </article>
+
+        <article class="ycard" data-year="1934" tabindex="0" role="button" aria-label="1934 长征开始，查看简介">
+          <span class="ycard__no">03</span>
+          <span class="ycard__year">1934</span>
+          <h3>长征开始</h3>
+          <p class="ycard__meta">1934 — 1936</p>
+          <p class="ycard__txt">两万五千里，翻了十八座山，过了二十四条河。雪山、草地、饿肚子，后头还有人追。这条路，本来是没人觉得能走通的。</p>
+          <span class="ycard__more">展开 ＋</span>
+        </article>
+
+        <article class="ycard" data-year="1935" tabindex="0" role="button" aria-label="1935 遵义会议，查看简介">
+          <span class="ycard__no">04</span>
+          <span class="ycard__year">1935</span>
+          <h3>遵义会议</h3>
+          <p class="ycard__meta">贵州 · 遵义</p>
+          <p class="ycard__txt">最危险的时候开了个会，方向掰了回来。后来四渡赤水、巧渡金沙，被围着的队伍，慢慢走出自己的节奏。</p>
+          <span class="ycard__more">展开 ＋</span>
+        </article>
+
+        <article class="ycard" data-year="1949" tabindex="0" role="button" aria-label="1949 开国那天，查看简介">
+          <span class="ycard__no">05</span>
+          <span class="ycard__year">1949</span>
+          <h3>开国那天</h3>
+          <p class="ycard__meta">北京 · 天安门</p>
+          <p class="ycard__txt">十月一日，城楼上那句话说完，这个国家就立起来了。从那以后，“中国人民”四个字后面，站着一个国家。</p>
+          <span class="ycard__more">展开 ＋</span>
+        </article>
+      </div>
+    </div>
+    <div class="wrap years__bar"><i id="yearsBar"></i></div>
+  </section>
+
+  <!-- ======================= 关键一步 ======================= -->
+  <section class="sec steps" id="steps">
+    <div class="wrap sec__head">
+      <div class="sec__label">
+        <span class="sec__no">02</span>
+        <h2>关键一步</h2>
+        <p>TURNING POINTS</p>
+      </div>
+      <div class="sec__intro">
+        <p>有些决定，当时看不出分量。回过头看，整条路是从那一步拐过去的。</p>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <div class="steps__list">
+        <article class="step reveal">
+          <span class="step__no">01</span>
+          <span class="step__year">1927</span>
+          <h3 class="step__title">三湾改编</h3>
+          <p class="step__txt">队伍快散的时候，把支部建到了连上。当兵的不再只是听号令，还知道自己为什么打。</p>
+        </article>
+
+        <article class="step reveal">
+          <span class="step__no">02</span>
+          <span class="step__year">1929</span>
+          <h3 class="step__title">古田会议</h3>
+          <p class="step__txt">为谁打仗、听谁指挥，这两个问题在这间祠堂里说清楚了。思想建党、政治建军，从这儿定下来。</p>
+        </article>
+
+        <article class="step reveal">
+          <span class="step__no">03</span>
+          <span class="step__year">1935</span>
+          <h3 class="step__title">遵义会议</h3>
+          <p class="step__txt">仗打不下去的时候，换了打法，也换了领头的人。此后队伍不再被牵着走。</p>
+        </article>
+
+        <article class="step reveal">
+          <span class="step__no">04</span>
+          <span class="step__year">1936</span>
+          <h3 class="step__title">西安事变</h3>
+          <p class="step__txt">抓住了蒋介石，又把他放了。这一步把内战按了暂停，抗日统一战线成了。</p>
+        </article>
+
+        <article class="step reveal">
+          <span class="step__no">05</span>
+          <span class="step__year">1938</span>
+          <h3 class="step__title">《论持久战》</h3>
+          <p class="step__txt">大家都急着问“还要打多久”。他给的答案是：慢，但会赢。着急的人，心里先有了底。</p>
+        </article>
+
+        <article class="step reveal">
+          <span class="step__no">06</span>
+          <span class="step__year">1948</span>
+          <h3 class="step__title">三大战役</h3>
+          <p class="step__txt">辽沈、淮海、平津，四个多月打完。这一仗下来，胜负就没悬念了。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= 红色地标（交互地图） ======================= -->
+  <section class="sec places" id="places">
+    <div class="wrap sec__head">
+      <div class="sec__label">
+        <span class="sec__no">03</span>
+        <h2>红色地标</h2>
+        <p>LANDMARKS</p>
+      </div>
+      <div class="sec__intro">
+        <p>有些地方本来就是个地名。后来出了些事，它就不一样了。点一下地图上的点，看看是哪些事。</p>
+      </div>
+    </div>
+
+    <div class="wrap places__grid">
+      <div class="map-wrap reveal">
+        <svg class="map" viewBox="0 0 620 470" role="img" aria-label="红色地标分布示意图">
+          <defs>
+            <pattern id="grid" width="31" height="31" patternUnits="userSpaceOnUse">
+              <path d="M31 0H0V31" fill="none" stroke="rgba(217,178,106,.10)" stroke-width="1"/>
+            </pattern>
+            <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#c8202a" stop-opacity=".55"/>
+              <stop offset="100%" stop-color="#c8202a" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <rect width="620" height="470" fill="url(#grid)"/>
+          <path class="map__route" d="M350,300 L450,345 L200,320 L285,190 L430,140"/>
+          <g class="map__node" data-place="jinggang" tabindex="0" role="button" aria-label="井冈山">
+            <circle class="halo" cx="350" cy="300" r="52" fill="url(#glow)"/>
+            <circle class="dot" cx="350" cy="300" r="5.5"/>
+            <text x="366" y="296">井冈山</text>
+            <text class="py" x="366" y="313">1927 · 江西</text>
+          </g>
+          <g class="map__node" data-place="ruijin" tabindex="0" role="button" aria-label="瑞金">
+            <circle class="halo" cx="450" cy="345" r="52" fill="url(#glow)"/>
+            <circle class="dot" cx="450" cy="345" r="5.5"/>
+            <text x="466" y="341">瑞金</text>
+            <text class="py" x="466" y="358">1931 · 江西</text>
+          </g>
+          <g class="map__node" data-place="zunyi" tabindex="0" role="button" aria-label="遵义">
+            <circle class="halo" cx="200" cy="320" r="52" fill="url(#glow)"/>
+            <circle class="dot" cx="200" cy="320" r="5.5"/>
+            <text x="118" y="316">遵义</text>
+            <text class="py" x="118" y="333">1935 · 贵州</text>
+          </g>
+          <g class="map__node" data-place="yanan" tabindex="0" role="button" aria-label="延安">
+            <circle class="halo" cx="285" cy="190" r="52" fill="url(#glow)"/>
+            <circle class="dot" cx="285" cy="190" r="5.5"/>
+            <text x="203" y="186">延安</text>
+            <text class="py" x="203" y="203">1937 · 陕西</text>
+          </g>
+          <g class="map__node" data-place="xibaipo" tabindex="0" role="button" aria-label="西柏坡">
+            <circle class="halo" cx="430" cy="140" r="52" fill="url(#glow)"/>
+            <circle class="dot" cx="430" cy="140" r="5.5"/>
+            <text x="340" y="136">西柏坡</text>
+            <text class="py" x="340" y="153">1948 · 河北</text>
+          </g>
+        </svg>
+        <p class="map__hint">点击点位切换 · 路线为示意</p>
+      </div>
+
+      <div class="place-panel reveal" id="placePanel" aria-live="polite">
+        <span class="place-panel__idx" id="ppIdx">01 / 05</span>
+        <h3 id="ppName">井冈山</h3>
+        <p class="place-panel__meta" id="ppMeta">Jinggangshan · 江西 · 1927</p>
+        <p class="place-panel__txt" id="ppTxt">山高、林密、路不好走，可就是在这儿，他们扎下了第一个农村根据地。八角楼那盏灯，经常亮到后半夜。</p>
+        <div class="place-panel__art" id="ppArt" aria-hidden="true">
+          <svg viewBox="0 0 400 120" preserveAspectRatio="none">
+            <path d="M0,100 L60,72 L110,96 L170,60 L230,98 L290,68 L350,100 L400,80 L400,120 L0,120 Z"/>
+          </svg>
+        </div>
+        <ul class="place-panel__tags" id="ppTags">
+          <li>中国革命的摇篮</li><li>农村包围城市</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= 精神谱系 ======================= -->
+  <section class="sec spirit" id="spirit">
+    <div class="wrap sec__head">
+      <div class="sec__label">
+        <span class="sec__no">04</span>
+        <h2>精神谱系</h2>
+        <p>SPIRITUAL LINEAGE</p>
+      </div>
+      <div class="sec__intro">
+        <p>这些精神来路不一样，但说到底是一件事：信得过人，靠得住人，也是为人办事。</p>
+      </div>
+    </div>
+
+    <div class="wrap spirit__grid">
+      <ul class="spirit__tabs" role="tablist" aria-label="精神谱系">
+        <li><button role="tab" aria-selected="true" data-spirit="boat"><i>1921</i>红船精神</button></li>
+        <li><button role="tab" aria-selected="false" data-spirit="jinggang"><i>1927</i>井冈山精神</button></li>
+        <li><button role="tab" aria-selected="false" data-spirit="longmarch"><i>1934</i>长征精神</button></li>
+        <li><button role="tab" aria-selected="false" data-spirit="yanan"><i>1935</i>延安精神</button></li>
+        <li><button role="tab" aria-selected="false" data-spirit="xibaipo"><i>1948</i>西柏坡精神</button></li>
+      </ul>
+
+      <div class="spirit__panel reveal" id="spiritPanel" role="tabpanel">
+        <span class="spirit__ghost" id="spGhost">1921</span>
+        <h3 id="spTitle">红船精神</h3>
+        <p class="spirit__en" id="spEn">THE RED BOAT SPIRIT</p>
+        <p class="spirit__txt" id="spTxt">敢想别人没想过的事，认定了就不回头，做事是为了大家，不是为了自己。说起来挺大，其实就是那条小船上十几个人当时的样子。</p>
+        <ul class="chips" id="spChips">
+          <li>开天辟地</li><li>敢为人先</li><li>百折不挠</li><li>忠诚为民</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= 诗里的话 ======================= -->
+  <section class="verse">
+    <div class="wrap verse__grid">
+      <blockquote class="reveal">
+        <p>红军不怕远征难，<br />万水千山只等闲。</p>
+        <cite>毛泽东《七律·长征》· 1935</cite>
+      </blockquote>
+      <blockquote class="reveal">
+        <p>雄关漫道真如铁，<br />而今迈步从头越。</p>
+        <cite>毛泽东《忆秦娥·娄山关》· 1935</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ======================= 点灯 ======================= -->
+  <section class="sec tribute" id="tribute">
+    <canvas id="fireflies" aria-hidden="true"></canvas>
+    <div class="wrap tribute__inner">
+      <div class="sec__label">
+        <span class="sec__no">05</span>
+        <h2>点亮一盏灯</h2>
+        <p>TRIBUTE</p>
+      </div>
+      <div class="tribute__body">
+        <p class="tribute__lead">历史上留下名字的只是少数。<br />更多的人，我们不知道他叫什么。</p>
+        <div class="tribute__ctrl">
+          <button class="btn btn--solid" id="lightBtn"><span>给他们点一盏</span><svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18"/></svg></button>
+          <p class="tribute__count">已点亮 <b id="count">0</b> 盏</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ======================= 页脚 ======================= -->
+<footer class="ftr">
+  <div class="wrap ftr__grid">
+    <div>
+      <h4>赤脉 · The Red Thread</h4>
+      <p>用一条红线，把年份、地方和精神串起来。能滚，也能点。</p>
+    </div>
+    <div>
+      <h4>作品信息</h4>
+      <ul>
+        <li>类型 · 红色文化主题单页网站</li>
+        <li>技术 · HTML / CSS / 原生 JavaScript</li>
+        <li>适配 · 桌面 / 平板 / 手机</li>
+      </ul>
+    </div>
+    <div>
+      <h4>目录</h4>
+      <ul class="ftr__links">
+        <li><a href="#prologue">序 · 红色是条线</a></li>
+        <li><a href="#years">壹 · 峥嵘岁月</a></li>
+        <li><a href="#steps">贰 · 关键一步</a></li>
+        <li><a href="#places">叁 · 红色地标</a></li>
+        <li><a href="#spirit">肆 · 精神谱系</a></li>
+        <li><a href="#tribute">伍 · 点亮一盏灯</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap ftr__bar">
+    <span>红色网页设计大赛 · 参赛作品</span>
+    <span>原创文字与图形 · 内容用于展示与学习</span>
+  </div>
+</footer>
+
+<!-- ======================= 年份详情弹层 ======================= -->
+<div class="modal" id="yearModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="ymTitle">
+  <div class="modal__backdrop" data-close></div>
+  <div class="modal__panel" role="document" tabindex="-1">
+    <button class="modal__close" data-close aria-label="关闭">
+      <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <span class="modal__year" id="ymYear">1921</span>
+    <h3 id="ymTitle">南湖的船</h3>
+    <p class="modal__meta" id="ymMeta">上海 · 嘉兴南湖</p>
+    <p class="modal__txt" id="ymTxt"></p>
+    <div class="modal__nav">
+      <button class="modal__arrow" id="ymPrev" aria-label="上一个">← 上一个</button>
+      <span class="modal__idx" id="ymIdx">01 / 05</span>
+      <button class="modal__arrow" id="ymNext" aria-label="下一个">下一个 →</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
